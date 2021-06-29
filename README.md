@@ -17,14 +17,17 @@ Every day, about 60 people die due to a fire hazard in India. It causes countles
 
 ## Our solution
 A web app which takes images from various CCTV  in building cameras runs a Neural Net and incase of a fire sends an alert  and suggests best possible escape route to users. Right now we have demonstrated on images but since the model is small enough and the latency is low, it can be used with live video stream.
+  
+The path in general
 ![The path in general](https://github.com/old-school-kid/FireProof/blob/main/media/graph.png)
 
 
 ## ML model 
 1. We used data which consisted of images from CCTV to make it as real as possible.
 2. We have used MobileNetV2 as the base model and achieved 96% accuracy on train and 95% on test with 4 fold train-test data split.
-3. With the help OpenCV tools we measure the percent area recorded by camera that is affected by fire and assign a weight to that node.
-4. ![Training and validation Accuracy and Loss graph](https://github.com/old-school-kid/FireProof/blob/main/media/Accuracy%20Loss%20graph%20.png)
+3. With the help OpenCV tools we measure the percent area recorded by camera that is affected by fire and assign a weight to that node.  
+4. Training and validation Accuracy and Loss graph
+![Training and validation Accuracy and Loss graph](https://github.com/old-school-kid/FireProof/blob/main/media/Accuracy%20Loss%20graph%20.png)
 
 
 ## Instruction
@@ -44,8 +47,11 @@ python app.py
 ```
 
 ## Demo
-![The landing page](https://github.com/old-school-kid/FireProof/blob/main/media/Landing%20page.png)
-![Path if there is a fire](https://github.com/old-school-kid/FireProof/blob/main/media/Path.png)
+The landing page
+![The landing page](https://github.com/old-school-kid/FireProof/blob/main/media/Landing%20page.png)  
+Path if there is a fire
+![Path if there is a fire](https://github.com/old-school-kid/FireProof/blob/main/media/Path.png)  
+If no fire is detected
 ![If no fire is detected](https://github.com/old-school-kid/FireProof/blob/main/media/No%20fire.png)
 
 ## Important Links
