@@ -1,9 +1,9 @@
 import numpy as np
 import tensorflow as tf
-import keras as K
+import tensorflow.keras.backend as K
 import cv2
-from keras.preprocessing.image import load_img
-from keras.preprocessing import image
+from tensorflow.keras.preprocessing.image import load_img
+from tensorflow.keras.preprocessing import image
 import warnings
 
 warnings.filterwarnings("ignore")
