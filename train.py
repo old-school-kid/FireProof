@@ -1,24 +1,17 @@
 import numpy as np
-import pandas as pd
 import os
 import random
 import tensorflow as tf
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import keras.backend as K
 
-from tensorflow.keras.layers import *
-from tensorflow.keras.callbacks import *
-from tensorflow.keras.optimizers import *
-from tensorflow.keras.applications import Xception, InceptionV3, MobileNetV2, NASNetMobile, EfficientNetB0    #Xception 299, inceptionV2 299, Nasnet 224
-from tensorflow.keras.activations import *
-from tensorflow.keras.losses import *
-from keras.callbacks import LearningRateScheduler
+from tensorflow.keras.layers import Flatten, Dense, Dropout
+from tensorflow.keras.callbacks import ReduceLROnPlateau, ModelCheckpoint, LearningRateScheduler
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.applications import MobileNetV2
 
 import cv2
 import matplotlib.pyplot as plt
-import joblib
-from keras.preprocessing.image import load_img
-from keras.preprocessing import image
 
 print("Num GPUs Available: ", len(tf.config.experimental.list_physical_devices('GPU')))
 
